@@ -27,9 +27,7 @@
    100% { transform: rotate(5deg) translateY(10px);  }
 }
 
-.LineChart {
-    animation: AnimateChartOpacityIn .8s 0s 1 forwards;
-}
+.LineChart { animation: AnimateChartOpacityIn .8s 0s 1 forwards; }
 
 .ChartRedRect {
   opacity: 0;
