@@ -1,6 +1,6 @@
 export type TTestItemsItem = {
-    name?: string;
-    [key: string]: number | string | undefined;
+    name: string;
+    [key: string]: number | string;
 };
 
 export type TTestItems = TTestItemsItem[];
