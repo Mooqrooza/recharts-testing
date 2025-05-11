@@ -1,0 +1,23 @@
+.Logo {
+    width: 120px;
+    transform-origin: right top;
+    animation: 
+        AnimateLogoHangOn 0.5s 1.4s 1 forwards, 
+        AnimateLogoBlinking 1s 1.9s infinite forwards;
+}
+
+@keyframes AnimateLogoHangOn {
+    0% { transform: rotate(0);}
+    2% { transform: rotate(-5deg); }
+    60% { transform: rotate(-5deg); }
+    61% { opacity:1; transform: rotate(-7deg); }
+    100% { opacity:0.6; transform: rotate(-7deg); }
+}
+
+@keyframes AnimateLogoBlinking {
+    0% { opacity: 1;}
+    1% { opacity: 0.1;}
+    2% { opacity: 0.9;}
+    90% { opacity: 0.2;}
+    100% { opacity:0.2; }
+}

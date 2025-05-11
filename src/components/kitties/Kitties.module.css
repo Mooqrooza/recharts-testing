@@ -1,0 +1,54 @@
+.Kitties {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.KittyA {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    opacity: 0;
+
+    animation: 
+      AnimateKittyAShowUp 12s 2s 1 forwards,
+      AnimateKittyShaking .05s 2s infinite forwards linear;
+}
+
+.KittyB {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    opacity: 0;
+
+    animation: 
+      AnimateKittyBShowUp 9s 2s 1 forwards,
+      AnimateKittyShaking .05s 2s infinite forwards linear;
+}
+
+@keyframes AnimateKittyAShowUp {
+    0% { 
+        opacity: 0; 
+        right: -400px; 
+        bottom: -400px; 
+    }
+    100% { opacity: 1; }
+}
+
+@keyframes AnimateKittyBShowUp {
+    0% { 
+        opacity: 0; 
+        left: -400px; 
+        bottom: -400px; 
+    }
+    100% { opacity: 1; }
+}
+
+@keyframes AnimateKittyShaking {
+    0% { transform: translate(5px); }
+    50% { transform: translate(-5px); }
+    100% { transform: translate(5px); }
+}

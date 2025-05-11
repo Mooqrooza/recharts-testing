@@ -1,0 +1,9 @@
+.SourceDataWindow {
+    opacity: 0;
+    animation: AnimateWindowOpacityIn .2s 0s 1 forwards;
+}
+
+@keyframes AnimateWindowOpacityIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}

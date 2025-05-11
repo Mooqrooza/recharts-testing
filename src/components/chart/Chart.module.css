@@ -1,0 +1,50 @@
+.Chart {
+   transition: min-height .3s 0s;
+   gap: 35px;
+   z-index: 1000;
+}
+
+.ChartSpinner { animation: AnimateChartOpacityIn .4s 0s 1 forwards; }
+
+.ChartAlert { animation: AnimateChartAlertHangOn 1s 3s 1 forwards; }
+
+@keyframes AnimateChartAlertHangOn {
+   0% { transform: rotate(0) translateY(0); }
+   2% { transform: rotate(2deg) translateY(5px); }
+   2.5% { transform: rotate(2deg) translateY(5px); }
+   11.5% { opacity: 1; }
+   12% { opacity: 0; } 
+   12.5% { opacity: 0; }
+   13% { opacity: 1; }
+   14% { opacity: 1; transform: rotate(2deg) translateY(5px); }
+   18% { opacity: 1; transform: rotate(3deg) translateY(5px) }
+   25% { opacity: 1; transform: rotate(3deg) translateY(5px); }
+   29% { opacity: 1; transform: rotate(4deg) translateY(5px); }
+   35% { opacity: 1; transform: rotate(4deg) translateY(5px); }
+   37% { opacity: 1; transform: rotate(3deg) translateY(10px); }
+   38% { opacity: 1; transform: rotate(4deg) translateY(10px); }
+   39% { opacity: 1; transform: rotate(5deg) translateY(10px); }
+   100% { transform: rotate(5deg) translateY(10px);  }
+}
+
+.LineChart {
+    animation: AnimateChartOpacityIn .8s 0s 1 forwards;
+}
+
+.ChartRedRect {
+  opacity: 0;
+  animation: AnimateChartOpacityIn .2s 0s 1 forwards;
+}
+
+.ChartDot { 
+   r: 4px;
+   transition: all .1s; 
+}
+.ChartDot:hover { r: 8px; }
+.ChartRedDot { fill: red; }
+
+
+@keyframes AnimateChartOpacityIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
